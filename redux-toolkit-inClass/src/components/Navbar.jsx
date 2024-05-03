@@ -7,6 +7,7 @@ import Button from "@mui/material/Button"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { clearUser } from "../features/loginSlice"
+import { clearNewsData } from "../features/newsSlice"
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -15,6 +16,7 @@ export default function Navbar() {
 
   const handleLogout = () => {
     dispatch(clearUser())
+    // dispatch(clearNewsData())
   }
   return (
     <Box sx={{ flexGrow: 1 }}>
